@@ -914,7 +914,7 @@ public class StreamTunnel {
         write(packetId);
         write(in.readShort());
         write(in.readShort());
-        byte length = in.readByte();
+        short length = in.readShort();
         write(length);
         copyNBytes(0xff & length);
         break;
