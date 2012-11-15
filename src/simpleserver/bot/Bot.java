@@ -525,8 +525,8 @@ public class Bot {
       case (byte) 0x83: // Item Data
         in.readShort();
         in.readShort();
-        byte length = in.readByte();
-        readNBytes(0xff & length);
+        short length = in.readShort();
+        readNBytes(length);
         break;
       case (byte) 0x84: // added in 12w06a
         in.readInt();
